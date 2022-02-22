@@ -12,9 +12,11 @@ class AppRoot extends StatelessWidget {
 
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (BuildContext context) => CurrencyCubit())
+        BlocProvider(create: (BuildContext context) => CurrencyCubit()),
+
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: CurrencyView(),
       ),
     );
